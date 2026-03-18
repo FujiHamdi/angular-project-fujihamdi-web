@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Construction Angular Projects FH</h2>
+
+  <div class="filters">
+    <input
+      type="text"
+      placeholder="Search project..."
+      ng-model="$ctrl.search"
+      ng-change="$ctrl.applyFilter()"
+    />
+
+    <select ng-model="$ctrl.area" ng-change="$ctrl.applyFilter()">
+      <option value="">All Areas</option>
+      <option ng-repeat="a in $ctrl.areas" value="{{a}}">
+        {{a}}
+      </option>
+    </select>
+
+    <select ng-model="$ctrl.company" ng-change="$ctrl.applyFilter()">
+      <option value="">All Companies</option>
+      <option ng-repeat="c in $ctrl.companies" value="{{c}}">
+        {{c}}
+      </option>
+    </select>
+  </div>
+
+  <div ng-if="$ctrl.filtered.length === 0" class="empty">
+    No projects found
+  </div>
+
+  <div
+    ng-repeat="p in $ctrl.filtered track by p.id"
+    class="project-card"
+    ng-click="$ctrl.open(p.id)"
+  >
+    <div class="project-title">{{p.project_name}}</div>
+
+    <div class="project-meta">
+      {{p.company}} • {{p.area}}
+    </div>
+
+    <div class="project-meta">
+      {{p.project_start}} → {{p.project_end}}
+    </div>
+
+    <div><b>{{p.project_value | currency:"£ ":0}}</b></div>
+  </div>
+</div>

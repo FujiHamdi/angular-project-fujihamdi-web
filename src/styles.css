@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #9da8c0;
+}
+
+.container {
+  max-width: 900px;
+  min-height: 465px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+
+.detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.project-card {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  background: #f0f7ff;
+  border-color: #409eff;
+}
+
+.project-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.project-meta {
+  font-size: 13px;
+  color: #666;
+}
+
+.empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  text-align: center;
+}
+
+.detail-empty {
+  color: #999;
+  text-align: center;
+}

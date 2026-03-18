@@ -1,0 +1,24 @@
+{
+  "name": "angular-project-fujihamdi",
+  "version": "1.0.0",
+  "description": "AngularJS project list assignment",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Fuji Hamdi",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.8.9",
+    "@types/angular-route": "^1.7.6",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3",
+    "vite": "^5.0.0"
+  }
+}

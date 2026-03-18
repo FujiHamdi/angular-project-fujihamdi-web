@@ -1,0 +1,18 @@
+<div class="detail-container" ng-if="$ctrl.project">
+    <button ng-click="$ctrl.goBack()">Back to List</button>
+    
+    <h2>{{$ctrl.project.project_name}}</h2>
+
+    <p><b>Company:</b> {{$ctrl.project.company}}</p>
+    <p><b>Area:</b> {{$ctrl.project.area}}</p>
+    <p><b>Duration:</b> {{$ctrl.project.project_start}} → {{$ctrl.project.project_end}}</p>
+    <p><b>Value:</b> £ {{$ctrl.project.project_value | number}}</p>
+
+    <hr />
+
+    <p>{{$ctrl.project.description}}</p>
+</div> 
+
+<div class="detail-container detail-empty" ng-if="!$ctrl.project">
+    Detail Project not found
+</div>
